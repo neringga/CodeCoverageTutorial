@@ -1,0 +1,33 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Runs unit tests"
+    lane :unit_testing do
+        scan(
+            project: "./CodeCoverageTutorial.xcodeproj",
+            device: "iPhone 13",
+            output_directory: "fastlane/unit_test_output",
+            code_coverage: true,
+            result_bundle: true
+        )
+        xcov(
+            is_swift_package: true,
+            output_directory: "fastlane/xcov_output"
+        )
+    end
+end
