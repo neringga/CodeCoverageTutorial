@@ -1,3 +1,3 @@
-# CodeCoverageTutorial
+# Code Coverage Tutorial
 
-A description of this package.
+This project contains code coverage tutorial code.
