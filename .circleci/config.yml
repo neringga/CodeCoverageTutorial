@@ -5,6 +5,7 @@ jobs:
     macos:
       xcode: 13.4.1
     steps:
+      - checkout
       - run:
           name: bundler install from Gemfile
           working_directory: CodeCoverageTutorial
