@@ -4,8 +4,10 @@ public struct CodeCoverageTutorial {
     public init() {
     }
     
-    public func test() {
+    public func randomFunction() -> Int {
         let a = 13
         let b = a + 14
+        
+        return b
     }
 }
